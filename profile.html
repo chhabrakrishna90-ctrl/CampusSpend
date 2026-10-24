@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings | CampusSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <h2>CampusSpend</h2>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">▦ <span>Dashboard</span></a>
+            <a href="transactions.html">↔ <span>Transactions</span></a>
+            <a href="budget.html">◷ <span>Budgets</span></a>
+            <a href="reports.html">▤ <span>Reports</span></a>
+            <a href="goals.html">◎ <span>Savings Goals</span></a>
+        </nav>
+
+        <p class="menu-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="active">⚙ <span>Profile Settings</span></a>
+            <a href="#" id="logoutBtn">↪ <span>Logout</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="avatar" id="sidebarAvatar">CS</div>
+            <div>
+                <strong id="sidebarName">Student Account</strong>
+                <small id="sidebarEmail">CampusSpend User</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="profile-main">
+
+        <header class="profile-header">
+            <div>
+                <p class="breadcrumb">CampusSpend / Profile Settings</p>
+                <h1>Profile Settings</h1>
+                <p class="page-subtitle">
+                    Manage your personal information and application preferences.
+                </p>
+            </div>
+        </header>
+
+        <!-- Profile Overview -->
+        <section class="profile-overview">
+            <div class="profile-avatar" id="profileAvatar">CS</div>
+
+            <div class="profile-overview-details">
+                <h2 id="overviewName">Student Account</h2>
+                <p id="overviewEmail">student@example.com</p>
+                <span class="profile-badge">CampusSpend User</span>
+            </div>
+        </section>
+
+        <!-- Personal Information -->
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Personal Information</h2>
+                <p>Update the details displayed in your profile.</p>
+            </div>
+
+            <form id="profileForm">
+
+                <div class="profile-form-grid">
+
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            maxlength="80"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            maxlength="120"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="college">College / University</label>
+                        <input
+                            type="text"
+                            id="college"
+                            maxlength="120"
+                            placeholder="Enter your college"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="course">Course</label>
+                        <input
+                            type="text"
+                            id="course"
+                            maxlength="80"
+                            placeholder="e.g. BCA"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="secondary-btn">
+                        Reset
+                    </button>
+
+                    <button type="submit" class="primary-btn">
+                        Save Profile
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Preferences -->
+        <section class="profile-panel">
+            <div class="panel-heading">
+                <h2>Application Preferences</h2>
+                <p>Customize how CampusSpend displays information.</p>
+            </div>
+
+            <form id="preferencesForm">
+
+                <div class="preference-row">
+                    <div>
+                        <h3>Currency</h3>
+                        <p>Choose the currency used to display amounts on this page.</p>
+                    </div>
+
+                    <select id="currency">
+                        <option value="INR">Indian Rupee (₹)</option>
+                        <option value="USD">US Dollar ($)</option>
+                        <option value="EUR">Euro (€)</option>
+                        <option value="GBP">British Pound (£)</option>
+                    </select>
+                </div>
+
+                <div class="preference-row">
+                    <div>
+                        <h3>Monthly Budget Reminders</h3>
+                        <p>Enable a visual reminder when expenses reach 80% of your budget.</p>
+                    </div>
+
+                    <label class="toggle">
+                        <input type="checkbox" id="budgetReminder">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="preference-row">
+                    <div>
+                        <h3>Low Savings Reminder</h3>
+                        <p>Enable a reminder when a savings goal is less than 20% complete.</p>
+                    </div>
+
+                    <label class="toggle">
+                        <input type="checkbox" id="savingsReminder">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">
+                        Save Preferences
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Data Information -->
+        <section class="profile-panel data-panel">
+            <div class="panel-heading">
+                <h2>Data & Privacy</h2>
+                <p>Understand how this demo stores your information.</p>
+            </div>
+
+            <div class="data-notice">
+                <div class="notice-icon">i</div>
+
+                <div>
+                    <h3>Browser-based storage</h3>
+                    <p>
+                        This version stores profile information and preferences
+                        in your browser's localStorage. It does not synchronize
+                        information across devices or provide server-side account
+                        security. Avoid entering sensitive personal information.
+                    </p>
+                </div>
+            </div>
+
+            <button type="button" id="clearProfileBtn" class="danger-btn">
+                Clear Saved Profile
+            </button>
+        </section>
+
+        <p id="profileMessage" class="profile-message" role="status"></p>
+
+    </main>
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | CampusSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <h2>CampusSpend</h2>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">▦ <span>Dashboard</span></a>
+            <a href="transactions.html">↔ <span>Transactions</span></a>
+            <a href="budget.html">◷ <span>Budgets</span></a>
+            <a href="reports.html" class="active">▤ <span>Reports</span></a>
+            <a href="goals.html">◎ <span>Savings Goals</span></a>
+        </nav>
+
+        <p class="menu-heading">ACCOUNT</p>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html">⚙ <span>Profile Settings</span></a>
+            <a href="#" id="logoutBtn">↪ <span>Logout</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="avatar">CS</div>
+            <div>
+                <strong>Student Account</strong>
+                <small>CampusSpend User</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="reports-main">
+
+        <header class="reports-header">
+            <div>
+                <p class="breadcrumb">CampusSpend / Reports</p>
+                <h1>Financial Reports</h1>
+                <p class="page-subtitle">
+                    Understand your spending and manage your money better.
+                </p>
+            </div>
+
+            <div class="report-controls">
+                <label for="reportMonth">Select month</label>
+                <input type="month" id="reportMonth">
+                <button type="button" id="exportBtn" class="export-btn">
+                    Export CSV
+                </button>
+            </div>
+        </header>
+
+        <!-- Financial Summary -->
+        <section class="report-summary">
+
+            <article class="report-card">
+                <div class="report-icon income-icon">↙</div>
+                <p>Total Income</p>
+                <h2 id="reportIncome">₹0.00</h2>
+                <small>Income recorded this month</small>
+            </article>
+
+            <article class="report-card">
+                <div class="report-icon expense-icon">↗</div>
+                <p>Total Expenses</p>
+                <h2 id="reportExpenses">₹0.00</h2>
+                <small>Expenses recorded this month</small>
+            </article>
+
+            <article class="report-card">
+                <div class="report-icon savings-icon">₹</div>
+                <p>Net Savings</p>
+                <h2 id="reportSavings">₹0.00</h2>
+                <small>Income minus expenses</small>
+            </article>
+
+            <article class="report-card">
+                <div class="report-icon budget-icon">◷</div>
+                <p>Budget Used</p>
+                <h2 id="reportBudgetUsed">0%</h2>
+                <small id="reportBudgetText">Of your monthly budget</small>
+            </article>
+
+        </section>
+
+        <!-- Charts -->
+        <section class="report-grid">
+
+            <article class="report-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Income vs Expenses</h2>
+                        <p>Compare your money received and spent.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-chart" id="comparisonChart">
+                    <div class="chart-column">
+                        <div class="chart-value" id="incomeChartValue">₹0</div>
+                        <div class="bar-area">
+                            <div class="chart-bar income-bar" id="incomeBar"></div>
+                        </div>
+                        <span>Income</span>
+                    </div>
+
+                    <div class="chart-column">
+                        <div class="chart-value" id="expenseChartValue">₹0</div>
+                        <div class="bar-area">
+                            <div class="chart-bar expense-bar" id="expenseBar"></div>
+                        </div>
+                        <span>Expenses</span>
+                    </div>
+                </div>
+
+                <p class="chart-note" id="comparisonNote">
+                    Add transactions to see your financial comparison.
+                </p>
+            </article>
+
+            <article class="report-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Category-wise Expenses</h2>
+                        <p>See where your money is going.</p>
+                    </div>
+                </div>
+
+                <div id="categoryReport" class="category-report"></div>
+
+                <div id="emptyCategoryReport" class="empty-report" hidden>
+                    No expense data available for this month.
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="report-panel transaction-report">
+            <div class="panel-heading">
+                <div>
+                    <h2>Monthly Transactions</h2>
+                    <p>All transactions recorded for the selected month.</p>
+                </div>
+                <span id="transactionCount" class="transaction-count">
+                    0 transactions
+                </span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th class="amount-column">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportTransactions"></tbody>
+                </table>
+            </div>
+
+            <div id="emptyTransactions" class="empty-report" hidden>
+                No transactions found for this month.
+                Add transactions from the Transactions page.
+            </div>
+        </section>
+
+        <p id="reportMessage" class="report-message" role="status"></p>
+
+    </main>
+</div>
+
+<script src="js/reports.js"></script>
+
+</body>
+</html>
+

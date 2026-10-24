@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | CampusSpend</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-body">
+
+    <main class="auth-container">
+
+        <!-- Left Branding Panel -->
+        <section class="auth-brand-panel">
+
+            <a href="index.html" class="auth-logo">
+                <span class="auth-logo-icon">🎓</span>
+                <span>CampusSpend</span>
+            </a>
+
+            <div class="brand-message">
+
+                <span class="brand-tag">YOUR FINANCIAL JOURNEY</span>
+
+                <h1>Start Building Better Money Habits.</h1>
+
+                <p>
+                    Create your account to track expenses, plan your budget,
+                    manage savings and work towards your financial goals.
+                </p>
+
+            </div>
+
+            <!-- Decorative Illustration -->
+            <div class="finance-illustration" aria-hidden="true">
+
+                <div class="illustration-glow"></div>
+
+                <div class="book book-back"></div>
+                <div class="book book-middle"></div>
+                <div class="book book-front"></div>
+
+                <div class="graduation-cap">
+                    <div class="cap-top"></div>
+                    <div class="cap-base"></div>
+                    <div class="cap-tassel"></div>
+                </div>
+
+                <div class="plant">
+                    <span class="leaf leaf-one"></span>
+                    <span class="leaf leaf-two"></span>
+                    <span class="leaf leaf-three"></span>
+                    <span class="plant-pot"></span>
+                </div>
+
+                <div class="coin coin-one">₹</div>
+                <div class="coin coin-two">₹</div>
+                <div class="coin coin-three">₹</div>
+
+            </div>
+
+            <div class="brand-footer">
+                <span class="footer-check">✓</span>
+                Plan wisely. Spend smartly. Achieve more.
+            </div>
+
+        </section>
+
+
+        <!-- Registration Form -->
+        <section class="auth-form-panel">
+
+            <div class="auth-form-wrapper">
+
+                <div class="mobile-brand">
+                    <span>🎓</span>
+                    <span>CampusSpend</span>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="auth-tabs">
+                    <a href="login.html" class="auth-tab">Login</a>
+                    <a href="register.html" class="auth-tab active">Sign Up</a>
+                </div>
+
+                <!-- Heading -->
+                <div class="auth-heading">
+                    <h2>Create Account</h2>
+
+                    <p>
+                        Enter your details to get started with CampusSpend.
+                    </p>
+                </div>
+
+
+                <form id="registerForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">♙</span>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="80"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- College -->
+                    <div class="form-group">
+                        <label for="college">College / University</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">▤</span>
+
+                            <input
+                                type="text"
+                                id="college"
+                                name="college"
+                                placeholder="Enter your college name"
+                                autocomplete="organization"
+                                maxlength="120"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-toggle-password="password"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >◉</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-toggle-password="confirmPassword"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >◉</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Terms -->
+                    <div class="form-options">
+
+                        <label class="remember-option">
+                            <input type="checkbox" id="terms" required>
+
+                            <span>
+                                I agree to the Terms and Privacy Policy.
+                            </span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- Message -->
+                    <p
+                        class="form-message"
+                        id="registerMessage"
+                        aria-live="polite"
+                    ></p>
+
+
+                    <!-- Submit -->
+                    <button type="submit" class="auth-submit">
+                        Create My Account
+                    </button>
+
+                </form>
+
+
+                <div class="auth-divider">
+                    <span>START YOUR FINANCIAL JOURNEY</span>
+                </div>
+
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+                <a href="index.html" class="back-home">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
+```

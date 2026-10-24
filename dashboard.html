@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CampusSpend</title>
+
+```
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+<script src="js/dashboard.js" defer></script>
+```
+
+</head>
+
+<body>
+
+```
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">₹</span>
+            <span>CampusSpend</span>
+        </a>
+
+        <div class="sidebar-heading">MAIN MENU</div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>↔</span> Transactions
+            </a>
+
+            <a href="budget.html" class="nav-link">
+                <span>◷</span> Budgets
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+            <a href="goals.html" class="nav-link">
+                <span>◎</span> Savings Goals
+            </a>
+        </nav>
+
+        <div class="sidebar-heading settings-heading">PREFERENCES</div>
+
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="nav-link">
+                <span>⚙</span> Profile Settings
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-card">
+                <div class="help-icon">?</div>
+                <h3>Need Help?</h3>
+                <p>Manage your student finances with confidence.</p>
+            </div>
+
+            <button class="logout-button" id="logoutButton">
+                <span>↪</span> Log Out
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR FINANCIAL OVERVIEW</p>
+                <h1>Dashboard</h1>
+                <p class="welcome-text">
+                    Welcome back! Here's what's happening with your money.
+                </p>
+            </div>
+
+            <div class="topbar-right">
+                <div class="date-display" id="currentDate">Loading date...</div>
+
+                <a href="profile.html" class="profile-avatar" title="Profile">
+                    S
+                </a>
+            </div>
+        </header>
+
+        <!-- Overview Cards -->
+        <section class="overview-grid">
+
+            <article class="summary-card balance-card">
+                <div class="card-top">
+                    <span class="card-label">Total Balance</span>
+                    <span class="card-icon balance-icon">₹</span>
+                </div>
+
+                <h2 id="totalBalance">₹0.00</h2>
+
+                <p class="card-description">Your available balance</p>
+
+                <div class="card-footer">
+                    <span class="status-dot"></span>
+                    <span>Across your finances</span>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="card-top">
+                    <span class="card-label">Total Income</span>
+                    <span class="card-icon income-icon">↙</span>
+                </div>
+
+                <h2 id="totalIncome">₹0.00</h2>
+
+                <p class="card-description">Money received</p>
+
+                <div class="card-footer positive-text">
+                    <span>↑</span>
+                    <span>Income this month</span>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="card-top">
+                    <span class="card-label">Total Expenses</span>
+                    <span class="card-icon expense-icon">↗</span>
+                </div>
+
+                <h2 id="totalExpenses">₹0.00</h2>
+
+                <p class="card-description">Money spent</p>
+
+                <div class="card-footer negative-text">
+                    <span>↓</span>
+                    <span>Expenses this month</span>
+                </div>
+            </article>
+
+            <article class="summary-card">
+                <div class="card-top">
+                    <span class="card-label">Monthly Budget</span>
+                    <span class="card-icon budget-icon">▤</span>
+                </div>
+
+                <h2 id="monthlyBudget">₹5,000.00</h2>
+
+                <p class="card-description">Your planned spending limit</p>
+
+                <div class="budget-progress">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="budgetProgress"></div>
+                    </div>
+                    <span id="budgetPercentage">0%</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Chart and Budget Section -->
+        <section class="middle-grid">
+
+            <article class="content-card spending-card">
+                <div class="section-header">
+                    <div>
+                        <h2>Monthly Spending</h2>
+                        <p>Your spending overview for the last six months</p>
+                    </div>
+
+                    <span class="small-badge">Overview</span>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-y-labels">
+                        <span>₹5,000</span>
+                        <span>₹4,000</span>
+                        <span>₹3,000</span>
+                        <span>₹2,000</span>
+                        <span>₹1,000</span>
+                        <span>₹0</span>
+                    </div>
+
+                    <div class="chart-area">
+                        <div class="chart-grid-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="chart-bars" id="spendingChart">
+                            <div class="chart-column">
+                                <div class="chart-bar" style="height: 35%"></div>
+                                <span>May</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <span>Jun</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="chart-bar" style="height: 42%"></div>
+                                <span>Jul</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <span>Aug</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="chart-bar" style="height: 55%"></div>
+                                <span>Sep</span>
+                            </div>
+
+                            <div class="chart-column">
+                                <div class="chart-bar current-bar" style="height: 30%"></div>
+                                <span>Oct</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="content-card budget-card">
+                <div class="section-header">
+                    <div>
+                        <h2>Budget Overview</h2>
+                        <p>Track your monthly spending</p>
+                    </div>
+                </div>
+
+                <div class="budget-circle" id="budgetCircle">
+                    <div class="circle-content">
+                        <strong id="budgetCirclePercentage">0%</strong>
+                        <span>Used</span>
+                    </div>
+                </div>
+
+                <div class="budget-details">
+                    <div>
+                        <span class="legend-dot spent-dot"></span>
+                        <span>Spent</span>
+                        <strong id="budgetSpent">₹0</strong>
+                    </div>
+
+                    <div>
+                        <span class="legend-dot remaining-dot"></span>
+                        <span>Remaining</span>
+                        <strong id="budgetRemaining">₹5,000</strong>
+                    </div>
+                </div>
+
+                <a href="budget.html" class="text-link">
+                    View Budget Details →
+                </a>
+            </article>
+
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="content-card transactions-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Recent Transactions</h2>
+                    <p>Keep track of your latest financial activities</p>
+                </div>
+
+                <a href="transactions.html" class="view-all-link">
+                    View All →
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TRANSACTION</th>
+                            <th>CATEGORY</th>
+                            <th>DATE</th>
+                            <th>AMOUNT</th>
+                            <th>TYPE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentTransactions">
+                        <tr>
+                            <td colspan="5" class="empty-state">
+                                No transactions yet. Add your first transaction
+                                to see it here.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="transaction-note">
+                <span>ⓘ</span>
+                These figures are demo data until you add real transactions.
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 CampusSpend. Built for smarter student finances.</p>
+        </footer>
+
+    </main>
+
+</div>
+```
+
+</body>
+</html>

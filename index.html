@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusSpend | Student Expense Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="brand">
+                <div class="brand-icon">🎓</div>
+
+                <div class="brand-text">
+                    <h2>Student Expense Management System</h2>
+                    <p>Plan <span>•</span> Track <span>•</span> Save <span>•</span> Achieve</p>
+                </div>
+            </a>
+
+            <div class="nav-description">
+                A simple and smart way for students to manage their money,
+                track expenses, set budgets and reach their goals.
+            </div>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">SMART FINANCIAL MANAGEMENT</span>
+
+                <h1>
+                    Take Control of Your Money.
+                    <span>Build Your Future.</span>
+                </h1>
+
+                <p>
+                    CampusSpend helps students organize their expenses,
+                    manage monthly budgets, track savings and make
+                    smarter financial decisions.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="register.html" class="btn btn-primary">
+                        Get Started <span>→</span>
+                    </a>
+
+                    <a href="#features" class="btn btn-outline">
+                        Explore Features
+                    </a>
+                </div>
+
+                <div class="hero-benefits">
+
+                    <div class="benefit">
+                        <span class="benefit-icon">✓</span>
+                        <span>Easy Expense Tracking</span>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="benefit-icon">✓</span>
+                        <span>Smart Budget Planning</span>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="benefit-icon">✓</span>
+                        <span>Clear Financial Reports</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard Preview -->
+            <div class="dashboard-preview">
+
+                <div class="preview-header">
+
+                    <div class="preview-brand">
+                        <div class="mini-logo">🎓</div>
+
+                        <div>
+                            <h3>CampusSpend</h3>
+                            <p>Student Dashboard</p>
+                        </div>
+                    </div>
+
+                    <span class="status-badge">
+                        ● Overview
+                    </span>
+
+                </div>
+
+
+                <div class="welcome-row">
+                    <div>
+                        <h3>Good Morning, Student!</h3>
+                        <p>Here's your financial summary.</p>
+                    </div>
+
+                    <div class="avatar">S</div>
+                </div>
+
+
+                <!-- Summary Cards -->
+                <div class="summary-grid">
+
+                    <div class="summary-card income-card">
+                        <div class="summary-top">
+                            <span class="summary-icon">↗</span>
+                            <span class="summary-label">Total Income</span>
+                        </div>
+
+                        <h3>₹12,000</h3>
+                        <p>Monthly overview</p>
+                    </div>
+
+
+                    <div class="summary-card expense-card">
+                        <div class="summary-top">
+                            <span class="summary-icon">↘</span>
+                            <span class="summary-label">Total Expenses</span>
+                        </div>
+
+                        <h3>₹8,450</h3>
+                        <p>Monthly overview</p>
+                    </div>
+
+
+                    <div class="summary-card balance-card">
+                        <div class="summary-top">
+                            <span class="summary-icon">₹</span>
+                            <span class="summary-label">Remaining</span>
+                        </div>
+
+                        <h3>₹3,550</h3>
+                        <p>Available balance</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Details -->
+                <div class="preview-details">
+
+                    <div class="detail-panel">
+
+                        <div class="panel-heading">
+                            <h4>Expense Breakdown</h4>
+                            <span>Monthly</span>
+                        </div>
+
+                        <div class="chart-layout">
+
+                            <div class="donut-chart">
+                                <div class="donut-center">
+                                    <strong>₹8,450</strong>
+                                    <span>Expenses</span>
+                                </div>
+                            </div>
+
+                            <div class="chart-legend">
+
+                                <div>
+                                    <span class="legend-dot food-dot"></span>
+                                    <span>Food</span>
+                                </div>
+
+                                <div>
+                                    <span class="legend-dot travel-dot"></span>
+                                    <span>Travel</span>
+                                </div>
+
+                                <div>
+                                    <span class="legend-dot study-dot"></span>
+                                    <span>Education</span>
+                                </div>
+
+                                <div>
+                                    <span class="legend-dot shopping-dot"></span>
+                                    <span>Shopping</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-panel">
+
+                        <div class="panel-heading">
+                            <h4>Recent Transactions</h4>
+                            <a href="transactions.html">View All</a>
+                        </div>
+
+                        <div class="transaction-row">
+                            <div class="transaction-icon food-bg">🍔</div>
+
+                            <div class="transaction-info">
+                                <h5>Food & Dining</h5>
+                                <p>Today's expense</p>
+                            </div>
+
+                            <strong class="expense-amount">−₹250</strong>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-icon travel-bg">🚌</div>
+
+                            <div class="transaction-info">
+                                <h5>Bus Pass</h5>
+                                <p>Transport</p>
+                            </div>
+
+                            <strong class="expense-amount">−₹600</strong>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-icon study-bg">📚</div>
+
+                            <div class="transaction-info">
+                                <h5>Online Course</h5>
+                                <p>Education</p>
+                            </div>
+
+                            <strong class="expense-amount">−₹1,200</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="preview-footer">
+                    <span>CampusSpend Financial Overview</span>
+                    <span>Sample Data</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features section" id="features">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">POWERFUL FEATURES</span>
+
+                <h2>Everything You Need to Manage Your Money</h2>
+
+                <p>
+                    Simple tools designed to help students track spending,
+                    plan ahead and achieve their financial goals.
+                </p>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <a href="transactions.html" class="feature-card">
+
+                    <div class="feature-icon purple-icon">↔</div>
+
+                    <h3>Manage Transactions</h3>
+
+                    <p>
+                        Add, edit and review your income and expenses
+                        in one organized place.
+                    </p>
+
+                    <span class="feature-link">Manage Transactions →</span>
+
+                </a>
+
+
+                <a href="dashboard.html" class="feature-card">
+
+                    <div class="feature-icon blue-icon">▦</div>
+
+                    <h3>Dashboard</h3>
+
+                    <p>
+                        Get a clear overview of your income, expenses
+                        and available balance.
+                    </p>
+
+                    <span class="feature-link">View Dashboard →</span>
+
+                </a>
+
+
+                <a href="budget.html" class="feature-card">
+
+                    <div class="feature-icon orange-icon">◎</div>
+
+                    <h3>Budget Management</h3>
+
+                    <p>
+                        Set monthly spending limits and monitor
+                        your budget across categories.
+                    </p>
+
+                    <span class="feature-link">Manage Budget →</span>
+
+                </a>
+
+
+                <a href="reports.html" class="feature-card">
+
+                    <div class="feature-icon green-icon">▥</div>
+
+                    <h3>Reports & Charts</h3>
+
+                    <p>
+                        Understand your spending patterns through
+                        visual summaries and reports.
+                    </p>
+
+                    <span class="feature-link">View Reports →</span>
+
+                </a>
+
+
+                <a href="goals.html" class="feature-card">
+
+                    <div class="feature-icon pink-icon">☆</div>
+
+                    <h3>Savings Goals</h3>
+
+                    <p>
+                        Create savings goals, track your progress
+                        and plan for future purchases.
+                    </p>
+
+                    <span class="feature-link">Track Goals →</span>
+
+                </a>
+
+
+                <a href="profile.html" class="feature-card">
+
+                    <div class="feature-icon indigo-icon">♙</div>
+
+                    <h3>Profile & Settings</h3>
+
+                    <p>
+                        Manage your personal information
+                        and account preferences.
+                    </p>
+
+                    <span class="feature-link">View Profile →</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- User Flow -->
+        <section class="workflow-section section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">SIMPLE USER EXPERIENCE</span>
+
+                <h2>Your Financial Journey</h2>
+
+                <p>
+                    Follow a simple process to organize your money
+                    and work towards your goals.
+                </p>
+
+            </div>
+
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <div class="workflow-icon">♙</div>
+                    <h4>01. Register</h4>
+                    <p>Create your account</p>
+                </div>
+
+                <span class="workflow-arrow">→</span>
+
+                <div class="workflow-step">
+                    <div class="workflow-icon">▦</div>
+                    <h4>02. Dashboard</h4>
+                    <p>View your finances</p>
+                </div>
+
+                <span class="workflow-arrow">→</span>
+
+                <div class="workflow-step">
+                    <div class="workflow-icon">↔</div>
+                    <h4>03. Track</h4>
+                    <p>Manage transactions</p>
+                </div>
+
+                <span class="workflow-arrow">→</span>
+
+                <div class="workflow-step">
+                    <div class="workflow-icon">◎</div>
+                    <h4>04. Plan</h4>
+                    <p>Set budgets and goals</p>
+                </div>
+
+                <span class="workflow-arrow">→</span>
+
+                <div class="workflow-step">
+                    <div class="workflow-icon">🏆</div>
+                    <h4>05. Achieve</h4>
+                    <p>Build better habits</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+
+            <div>
+                <span class="cta-label">YOUR MONEY. YOUR FUTURE.</span>
+
+                <h2>Start Managing Your Money Smarter</h2>
+
+                <p>
+                    Take the first step towards better budgeting
+                    and more confident financial decisions.
+                </p>
+            </div>
+
+            <a href="register.html" class="btn btn-white">
+                Create Your Account →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <div class="footer-logo">🎓</div>
+
+            <div>
+                <h3>Student Expense Management System</h3>
+                <p>Plan • Track • Save • Achieve</p>
+            </div>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 CampusSpend. All rights reserved.
+        </p>
+
+        <p class="footer-tagline">
+            Smart Spending Today → Financial Freedom Tomorrow
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
