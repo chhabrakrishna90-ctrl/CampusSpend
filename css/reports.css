@@ -1,0 +1,473 @@
+
+/* CampusSpend Reports Page */
+
+.reports-main {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 32px;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+.reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.breadcrumb {
+    margin: 0 0 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.reports-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.page-subtitle {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.report-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.report-controls label {
+    width: 100%;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.report-controls input {
+    padding: 11px;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e293b;
+    font: inherit;
+}
+
+.export-btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #4568e8;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.export-btn:hover {
+    background: #3454d1;
+}
+
+/* Summary cards */
+
+.report-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.report-card {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+.report-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
+    border-radius: 11px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.income-icon {
+    color: #16a34a;
+    background: #dcfce7;
+}
+
+.expense-icon {
+    color: #ea580c;
+    background: #ffedd5;
+}
+
+.savings-icon {
+    color: #4568e8;
+    background: #e8edff;
+}
+
+.budget-icon {
+    color: #9333ea;
+    background: #f3e8ff;
+}
+
+.report-card p {
+    margin: 0 0 9px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.report-card h2 {
+    margin: 0 0 9px;
+    font-size: 24px;
+    overflow-wrap: anywhere;
+}
+
+.report-card small {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* Report panels */
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.report-panel {
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.panel-heading h2 {
+    margin: 0 0 7px;
+    font-size: 18px;
+}
+
+.panel-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Income and expense bar chart */
+
+.comparison-chart {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 55px;
+    min-height: 260px;
+    padding: 10px 10px 0;
+}
+
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100px;
+    text-align: center;
+}
+
+.chart-value {
+    margin-bottom: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.bar-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 66px;
+    height: 185px;
+    border-bottom: 1px solid #dbe2ea;
+    background: repeating-linear-gradient(
+        to top,
+        transparent 0,
+        transparent 44px,
+        #eef1f6 45px,
+        #eef1f6 46px
+    );
+}
+
+.chart-bar {
+    width: 45px;
+    height: 0;
+    min-height: 0;
+    border-radius: 7px 7px 0 0;
+    transition: height 0.3s ease;
+}
+
+.income-bar {
+    background: #22c55e;
+}
+
+.expense-bar {
+    background: #f97316;
+}
+
+.chart-column > span {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.chart-note {
+    margin: 17px 0 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Category spending report */
+
+.category-report {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-report-item {
+    min-width: 0;
+}
+
+.category-report-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+    font-size: 13px;
+}
+
+.category-report-name {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.category-report-amount {
+    color: #475569;
+    white-space: nowrap;
+}
+
+.category-report-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #edf0f6;
+}
+
+.category-report-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: #4568e8;
+}
+
+.category-report-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 7px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.empty-report {
+    padding: 25px 10px;
+    color: #64748b;
+    text-align: center;
+    font-size: 13px;
+}
+
+.empty-report[hidden] {
+    display: none;
+}
+
+/* Transactions table */
+
+.transaction-report {
+    margin-bottom: 22px;
+}
+
+.transaction-count {
+    flex-shrink: 0;
+    padding: 7px 10px;
+    border-radius: 7px;
+    background: #eef2ff;
+    color: #4568e8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-wrapper th {
+    padding: 13px 12px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table-wrapper td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 12px;
+}
+
+.table-wrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.transaction-name {
+    font-weight: 600;
+    color: #334155;
+}
+
+.transaction-note {
+    display: block;
+    max-width: 180px;
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.income-badge {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.expense-badge {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.amount-column {
+    text-align: right;
+}
+
+.amount-cell {
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.income-amount {
+    color: #16a34a;
+}
+
+.expense-amount {
+    color: #ea580c;
+}
+
+.report-message {
+    min-height: 20px;
+    color: #15803d;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .reports-main {
+        padding: 24px;
+    }
+
+    .report-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .reports-header {
+        flex-direction: column;
+    }
+
+    .report-controls {
+        width: 100%;
+    }
+
+    .report-controls input {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reports-main {
+        padding: 15px;
+    }
+
+    .reports-header h1 {
+        font-size: 23px;
+    }
+
+    .report-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .report-panel {
+        padding: 17px;
+    }
+
+    .comparison-chart {
+        gap: 25px;
+    }
+
+    .panel-heading {
+        flex-direction: column;
+    }
+}
+
+/* ========================================== REPORTS PAGE — SIDEBAR AND LAYOUT FIX ========================================== */ .app-container { display: flex; align-items: stretch; min-height: 100vh; width: 100%; } /* Sidebar: match Dashboard theme */ .app-container > .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 287px; height: 100vh; min-height: 0; flex: 0 0 287px; display: flex; flex-direction: column; padding: 24px 16px; overflow-y: auto; overflow-x: hidden; background: #14263f; color: #ffffff; border-right: 1px solid #263b55; box-sizing: border-box; z-index: 1000; } /* Brand */ .app-container > .sidebar .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 38px; flex-shrink: 0; } .app-container > .sidebar .brand-icon { width: 40px; height: 46px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(135deg, #818cf8, #4f46e5); color: #ffffff; font-size: 23px; } .app-container > .sidebar .brand h2 { color: #ffffff; font-size: 23px; font-weight: 800; white-space: nowrap; } /* Menu headings */ .app-container > .sidebar .menu-heading { margin: 10px 0 12px; color: #9aacc5; font-size: 12px; letter-spacing: 1px; flex-shrink: 0; } /* Navigation */ .app-container > .sidebar .sidebar-nav { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; flex-shrink: 0; } .app-container > .sidebar .sidebar-nav a { width: 100%; min-height: 54px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; color: #8fa5c2; background: transparent; border-radius: 11px; font-size: 14px; font-weight: 600; text-decoration: none; box-sizing: border-box; transition: background 0.2s ease, color 0.2s ease; } .app-container > .sidebar .sidebar-nav a span { min-width: 0; } .app-container > .sidebar .sidebar-nav a:hover { color: #ffffff; background: #203651; } .app-container > .sidebar .sidebar-nav a.active { color: #4f46e5; background: #eef2ff; font-weight: 700; } /* Account area at the bottom */ .app-container > .sidebar .sidebar-footer { display: flex; align-items: center; gap: 12px; margin-top: auto; padding: 18px 4px 4px; border-top: 1px solid #30445e; color: #ffffff; flex-shrink: 0; } .app-container > .sidebar .avatar { width: 44px; height: 44px; flex: 0 0 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: linear-gradient(135deg, #818cf8, #4f46e5); color: #ffffff; font-weight: 800; } .app-container > .sidebar .sidebar-footer > div:last-child { min-width: 0; display: flex; flex-direction: column; } .app-container > .sidebar .sidebar-footer strong { color: #ffffff; font-size: 13px; overflow-wrap: anywhere; } .app-container > .sidebar .sidebar-footer small { color: #9aacc5; font-size: 11px; overflow-wrap: anywhere; } /* IMPORTANT: your HTML uses .reports-main */ .app-container > .reports-main { display: block; margin-left: 287px; width: calc(100% - 287px); min-width: 0; min-height: 100vh; padding: 32px; box-sizing: border-box; } /* Keep the report header and cards within available space */ .reports-main .reports-header { min-width: 0; max-width: 100%; } .reports-main .report-summary, .reports-main .report-grid, .reports-main .report-panel { min-width: 0; max-width: 100%; box-sizing: border-box; } .reports-main .report-card { min-width: 0; box-sizing: border-box; } .reports-main .table-wrapper { max-width: 100%; overflow-x: auto; } /* Smaller screens */ @media (max-width: 800px) { .app-container > .sidebar { width: 240px; } .app-container > .reports-main { margin-left: 240px; width: calc(100% - 240px); padding: 24px 18px; } } @media (max-width: 600px) { .app-container { display: block; } .app-container > .sidebar { position: relative; top: auto; left: auto; bottom: auto; width: 100%; height: auto; min-height: 0; padding: 16px; } .app-container > .sidebar .brand { margin-bottom: 18px; } .app-container > .sidebar .sidebar-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; } .app-container > .sidebar .sidebar-nav a { min-height: 46px; padding: 10px; gap: 8px; font-size: 12px; } .app-container > .sidebar .sidebar-footer { margin-top: 10px; } .app-container > .reports-main { margin-left: 0; width: 100%; min-height: 0; padding: 22px 16px; } }

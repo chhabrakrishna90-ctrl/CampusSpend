@@ -1,0 +1,389 @@
+
+/* CampuSpend Profile Settings */
+
+.profile-main {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 32px;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.breadcrumb {
+    margin: 0 0 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.profile-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.page-subtitle {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Profile overview */
+
+.profile-overview {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    margin-bottom: 24px;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.profile-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #e8edff;
+    color: #4568e8;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-overview-details h2 {
+    margin: 0 0 7px;
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.profile-overview-details p {
+    margin: 0 0 10px;
+    color: #64748b;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.profile-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #4568e8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Main panels */
+
+.profile-panel {
+    padding: 26px;
+    margin-bottom: 24px;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+.panel-heading {
+    margin-bottom: 24px;
+}
+
+.panel-heading h2 {
+    margin: 0 0 7px;
+    font-size: 19px;
+}
+
+.panel-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Profile form */
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.input-group label {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-group input,
+.preference-row select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background: #fff;
+    color: #1e293b;
+    font: inherit;
+    outline: none;
+}
+
+.input-group input:focus,
+.preference-row select:focus {
+    border-color: #4568e8;
+    box-shadow: 0 0 0 3px rgba(69, 104, 232, 0.12);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.primary-btn,
+.secondary-btn,
+.danger-btn {
+    padding: 12px 17px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.primary-btn {
+    background: #4568e8;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background: #3454d1;
+}
+
+.secondary-btn {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.secondary-btn:hover {
+    background: #e2e8f0;
+}
+
+/* Preferences */
+
+.preference-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.preference-row:first-child {
+    padding-top: 0;
+}
+
+.preference-row:last-of-type {
+    border-bottom: none;
+}
+
+.preference-row h3 {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.preference-row p {
+    max-width: 450px;
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.preference-row select {
+    width: auto;
+    min-width: 190px;
+}
+
+/* Toggle switches */
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 46px;
+    height: 25px;
+}
+
+.toggle input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-slider::before {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 19px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.toggle input:checked + .toggle-slider {
+    background: #4568e8;
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(21px);
+}
+
+.toggle input:focus-visible + .toggle-slider {
+    outline: 3px solid #bfdbfe;
+    outline-offset: 2px;
+}
+
+/* Data and privacy */
+
+.data-notice {
+    display: flex;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 22px;
+    border: 1px solid #dbeafe;
+    border-radius: 11px;
+    background: #eff6ff;
+}
+
+.notice-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.data-notice h3 {
+    margin: 0 0 7px;
+    color: #1e40af;
+    font-size: 14px;
+}
+
+.data-notice p {
+    margin: 0;
+    color: #475569;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.danger-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.danger-btn:hover {
+    background: #fee2e2;
+}
+
+.profile-message {
+    min-height: 20px;
+    margin-bottom: 20px;
+    color: #15803d;
+    font-size: 13px;
+}
+
+.profile-message.error {
+    color: #dc2626;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .profile-main {
+        padding: 24px;
+    }
+
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-main {
+        padding: 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 23px;
+    }
+
+    .profile-panel {
+        padding: 18px;
+    }
+
+    .profile-overview {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .profile-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 20px;
+    }
+
+    .preference-row {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .preference-row select {
+        min-width: 0;
+        max-width: 48%;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+    }
+
+    .form-actions button {
+        flex: 1;
+    }
+
+    .data-notice {
+        padding: 13px;
+    }
+}
+
+
+/* ========================================== REPORTS PAGE — SIDEBAR AND LAYOUT FIX ========================================== */ .app-container { display: flex; align-items: stretch; min-height: 100vh; width: 100%; } /* Sidebar: match Dashboard theme */ .app-container > .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 287px; height: 100vh; min-height: 0; flex: 0 0 287px; display: flex; flex-direction: column; padding: 24px 16px; overflow-y: auto; overflow-x: hidden; background: #14263f; color: #ffffff; border-right: 1px solid #263b55; box-sizing: border-box; z-index: 1000; } /* Brand */ .app-container > .sidebar .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 38px; flex-shrink: 0; } .app-container > .sidebar .brand-icon { width: 40px; height: 46px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(135deg, #818cf8, #4f46e5); color: #ffffff; font-size: 23px; } .app-container > .sidebar .brand h2 { color: #ffffff; font-size: 23px; font-weight: 800; white-space: nowrap; } /* Menu headings */ .app-container > .sidebar .menu-heading { margin: 10px 0 12px; color: #9aacc5; font-size: 12px; letter-spacing: 1px; flex-shrink: 0; } /* Navigation */ .app-container > .sidebar .sidebar-nav { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; flex-shrink: 0; } .app-container > .sidebar .sidebar-nav a { width: 100%; min-height: 54px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; color: #8fa5c2; background: transparent; border-radius: 11px; font-size: 14px; font-weight: 600; text-decoration: none; box-sizing: border-box; transition: background 0.2s ease, color 0.2s ease; } .app-container > .sidebar .sidebar-nav a span { min-width: 0; } .app-container > .sidebar .sidebar-nav a:hover { color: #ffffff; background: #203651; } .app-container > .sidebar .sidebar-nav a.active { color: #4f46e5; background: #eef2ff; font-weight: 700; } /* Account area at the bottom */ .app-container > .sidebar .sidebar-footer { display: flex; align-items: center; gap: 12px; margin-top: auto; padding: 18px 4px 4px; border-top: 1px solid #30445e; color: #ffffff; flex-shrink: 0; } .app-container > .sidebar .avatar { width: 44px; height: 44px; flex: 0 0 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: linear-gradient(135deg, #818cf8, #4f46e5); color: #ffffff; font-weight: 800; } .app-container > .sidebar .sidebar-footer > div:last-child { min-width: 0; display: flex; flex-direction: column; } .app-container > .sidebar .sidebar-footer strong { color: #ffffff; font-size: 13px; overflow-wrap: anywhere; } .app-container > .sidebar .sidebar-footer small { color: #9aacc5; font-size: 11px; overflow-wrap: anywhere; } /* IMPORTANT: your HTML uses .reports-main */ .app-container > .reports-main { display: block; margin-left: 287px; width: calc(100% - 287px); min-width: 0; min-height: 100vh; padding: 32px; box-sizing: border-box; } /* Keep the report header and cards within available space */ .reports-main .reports-header { min-width: 0; max-width: 100%; } .reports-main .report-summary, .reports-main .report-grid, .reports-main .report-panel { min-width: 0; max-width: 100%; box-sizing: border-box; } .reports-main .report-card { min-width: 0; box-sizing: border-box; } .reports-main .table-wrapper { max-width: 100%; overflow-x: auto; } /* Smaller screens */ @media (max-width: 800px) { .app-container > .sidebar { width: 240px; } .app-container > .reports-main { margin-left: 240px; width: calc(100% - 240px); padding: 24px 18px; } } @media (max-width: 600px) { .app-container { display: block; } .app-container > .sidebar { position: relative; top: auto; left: auto; bottom: auto; width: 100%; height: auto; min-height: 0; padding: 16px; } .app-container > .sidebar .brand { margin-bottom: 18px; } .app-container > .sidebar .sidebar-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; } .app-container > .sidebar .sidebar-nav a { min-height: 46px; padding: 10px; gap: 8px; font-size: 12px; } .app-container > .sidebar .sidebar-footer { margin-top: 10px; } .app-container > .reports-main { margin-left: 0; width: 100%; min-height: 0; padding: 22px 16px; } }
